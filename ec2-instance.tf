@@ -17,10 +17,11 @@ provisioner "file" {
   provisioner "remote-exec" {
     inline = [
       "sleep 120",
-      "sudo cp /tmp/file-copy.html /var/www/html/"
+      "sudo cp /tmp/file-copy.html /var/www/html/",
+      "sudo chmod 644 /var/www/html/file-copy.html"
     ]
   }
-  
+
 connection {
             type = "ssh"
             host = self.public_ip
