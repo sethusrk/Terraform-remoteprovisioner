@@ -16,7 +16,7 @@ provisioner "file" {
 
   provisioner "remote-exec" {
     inline = [
-      "sleep 120",
+      "sleep 180",
       "sudo cp /tmp/file-copy.html /var/www/html/",
       "sudo chmod 644 /var/www/html/file-copy.html"
     ]
